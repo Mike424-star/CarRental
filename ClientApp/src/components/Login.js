@@ -1,6 +1,7 @@
 ﻿import React, { Component, setState } from 'react';
 import axios from "axios";
 const User_URL = "https://localhost:3000/user" 
+import './CarLoginStyle.css';
 
 export class Login extends Component {
   constructor(props) {
@@ -51,26 +52,22 @@ export class Login extends Component {
 
   render() {
     return (
-      <div className="parent-element">
+       <div class="login-page">
+<div class="form">
+<form class="register-form">
+    <input type="text" placeholder="Användarnamn"/>
+    <input type="Lösenord" placeholder="Lösenord"/>
+    <input type="text" placeholder="email"/>
+    <button>Skapa</button>
+    <p class="message">Redan Registrerad?  <a href="#">Logga in</a> </p>
+</form>
 
-        <form
-          onSubmit={this.handleRegister}>
-        
-          <input
-            type="text"
-            name="email"
-            value={this.state.email}
-            onChange={this.onChangeEmail}
-             />
-
-          <input
-            type="text"
-            name="password"
-            value={this.state.password}
-            onChange={this.onChangePassword}
-          />
-          <button type="submit">Register</button>
-
+<form class="login-form">
+    <input type="text" placeholder="Användarnamn"/>
+    <input type="Lösenord" placeholder="Lösenord"/>
+    <button>Logga in</button>
+   
+    <p class="message">Inte registrerad?  <a href="#"> Registrera</a></p>
 
         </form>
 
